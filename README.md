@@ -1,4 +1,6 @@
 # Assignment
+Start the project by cloning repo and run ```npm i``` and ```npm run dev```
+# Assignment
 
 Please create a page that contains an input field.
 When the user enters _at least_ three characters into this input field,
