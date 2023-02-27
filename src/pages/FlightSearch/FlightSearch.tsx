@@ -1,5 +1,5 @@
 import { useState, lazy, Suspense } from 'react'
-import FlightTable from '../../components/FlightResults/FlightTable/FlightsTable'
+import FlightsTable from '../../components/FlightResults/FlightTable/FlightsTable'
 import SearchInput from '../../components/SearchInput/SearchInput'
 import useFlight from '../../hooks/useFlight'
 import './FlightSearch.css'
@@ -55,7 +55,7 @@ export default function FlightSearchPage() {
             handleSort={handleSort}
             isLoading={isLoading}
           >
-            <FlightTable results={filteredFlights} />
+            <FlightsTable results={filteredFlights} />
           </FlightResults>
         </Suspense>
       )}
