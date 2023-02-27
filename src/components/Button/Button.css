@@ -4,5 +4,8 @@ button {
     color: var(--white);
     background-color: var(--afternoon-blue);
     box-shadow: 0rem 0.125em 0 0 var(----schiphol-blue);
-    font-size: 10px;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
