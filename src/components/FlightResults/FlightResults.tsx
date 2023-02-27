@@ -1,6 +1,6 @@
 import Button from '../Button/Button'
 import './FlightResults.css'
-import ChevronIcon from '../icons/Chevron'
+import ChevronIcon from '../Icon/Chevron'
 
 interface FlightResultsProps {
   isSortedAscending: boolean
