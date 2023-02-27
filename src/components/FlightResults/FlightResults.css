@@ -1,0 +1,69 @@
+.flightResults__wrapper {
+    display: flex;
+    padding-block: 2.25rem;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 500ms forwards;
+}
+
+.flightResults__sort-button {
+    margin-left: auto;
+    padding: 1rem;
+    width: fit-content;
+}
+
+.flightResults__sort-button--ascending {
+    transform: rotate(180deg);
+}
+
+.flightResults__sort-button--descending {
+    transform: rotate(0deg);
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 0.5rem;
+}
+
+thead {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+tr {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: 576px) {
+        gap: 4rem;
+    }
+}
+
+td, th {
+    width: 150px;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    table {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    tr {
+        gap: 4rem;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

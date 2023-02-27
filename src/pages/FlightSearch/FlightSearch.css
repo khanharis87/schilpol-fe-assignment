@@ -1,0 +1,8 @@
+.flightSearch__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-inline: auto;
+}

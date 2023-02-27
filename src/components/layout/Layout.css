@@ -1,0 +1,35 @@
+.layout_wrapper {
+    margin: 0 auto;
+    height: 40vh;
+    width: 100vw;
+}
+
+.hero {
+    display: flex;
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    background-image: var(--gradient-more);
+    position: absolute;
+    inset: 0;
+    transform: skewY(-5deg);
+    
+    z-index: -1;
+}
+
+.hero_heading {
+    margin: 0 auto;
+    color: var( --white);
+    font-size: 3rem;
+    text-align: center;
+}
+
+section {
+    max-width: 50rem;
+    margin-inline: auto;
+    padding-block: 1rem;
+}
