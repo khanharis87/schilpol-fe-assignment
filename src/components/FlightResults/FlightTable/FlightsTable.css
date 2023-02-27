@@ -1,0 +1,52 @@
+.flightsTable {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 0.5rem;
+}
+
+.flightsTable__head {
+    display: inline-block;
+    margin-bottom: 1rem;
+
+}
+
+.flightsTable__head-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.flightsTable__body-row-data,
+.flightsTable__head-row-item{
+    width: 150px;
+    text-align: center;
+}
+
+.flightsTable__body-row {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+    .flightsTable {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .flightsTable__head-row,
+    .flightsTable__body-row {
+        display: flex;
+        gap: 4rem;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

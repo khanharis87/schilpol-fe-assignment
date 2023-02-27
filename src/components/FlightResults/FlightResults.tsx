@@ -1,20 +1,19 @@
-import { Flight } from '../../types/Flights'
 import Button from '../Button/Button'
 import './FlightResults.css'
 import ChevronIcon from '../icons/Chevron'
 
 interface FlightResultsProps {
-  results: Flight[]
   isSortedAscending: boolean
   handleSort: () => void
   isLoading: boolean
+  children: React.ReactNode
 }
 
 function FlightResults({
-  results,
   isSortedAscending,
   handleSort,
   isLoading,
+  children,
 }: FlightResultsProps) {
   return (
     <div className="flightResults">
@@ -35,26 +34,7 @@ function FlightResults({
         </Button>
       </div>
 
-      <div className="flightResults__wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Destination</th>
-              <th>Flight Number</th>
-              <th>Expected Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            {results.map((flight) => (
-              <tr key={flight.flightIdentifier}>
-                <td>{flight.airport} </td>
-                <td>{flight.flightNumber} </td>
-                <td>{flight.expectedTime} </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <div className="flightResults__wrapper">{children}</div>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { useState, lazy, Suspense } from 'react'
+import FlightTable from '../../components/FlightResults/FlightTable/FlightsTable'
 import SearchInput from '../../components/SearchInput/SearchInput'
 import useFlight from '../../hooks/useFlight'
 import './FlightSearch.css'
@@ -50,11 +51,12 @@ export default function FlightSearchPage() {
       {displayResults() && (
         <Suspense fallback={<div>Loading Flight Results...</div>}>
           <FlightResults
-            results={filteredFlights}
             isSortedAscending={isSortedAscending}
             handleSort={handleSort}
             isLoading={isLoading}
-          />
+          >
+            <FlightTable results={filteredFlights} />
+          </FlightResults>
         </Suspense>
       )}
     </div>
