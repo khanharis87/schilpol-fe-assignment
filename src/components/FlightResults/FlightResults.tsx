@@ -1,6 +1,7 @@
 import { Flight } from '../../types/Flights'
 import Button from '../Button/Button'
 import './FlightResults.css'
+import ChevronIcon from '../icons/Chevron'
 
 interface FlightResultsProps {
   results: Flight[]
@@ -21,11 +22,8 @@ function FlightResults({
 
       <div className="flightResults__sort-button">
         <Button handleClick={handleSort}>
-          Sort by time
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
+          Sort by time{' '}
+          <ChevronIcon
             width={10}
             height={10}
             className={
@@ -33,13 +31,7 @@ function FlightResults({
                 ? 'flightResults__sort-button--ascending'
                 : 'flightResults__sort-button--descending'
             }
-          >
-            <path
-              fillRule="evenodd"
-              d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z"
-              clipRule="evenodd"
-            />
-          </svg>
+          />
         </Button>
       </div>
 
